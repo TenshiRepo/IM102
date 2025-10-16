@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Details</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='profile_style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="profile-card">
+      <div class="card-header">
+        <h3>Social Media Profile</h3>
+      </div>
+      <div class="card-body">
+        <div class="profile-item">
+          <div class="profile-label">Name</div>
+          <div class="profile-value">
+            {{ data.firstname }} {{ data.lastname }}
+          </div>
+        </div>
+        <div class="profile-item">
+          <div class="profile-label">Sex</div>
+          <div class="profile-value">{{ data.sex }}</div>
+        </div>
+        <div class="profile-item">
+          <div class="profile-label">Status</div>
+          <div class="profile-value">{{ data.status }}</div>
+        </div>
+        <div class="profile-item">
+          <div class="profile-label">Location</div>
+          <div class="profile-value">{{ data.location }}</div>
+        </div>
+        <a href="/" class="back-btn">Back to Form</a>
+      </div>
+    </div>
+  </body>
+</html>

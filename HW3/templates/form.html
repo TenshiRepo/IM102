@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soc Med Profile</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h4>Social Media Profile</h4>
+
+      <form action="/create_profile" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstname">Firstname</label>
+            <input type="text" id="firstname" name="firstname" required />
+          </div>
+          <div class="form-group">
+            <label for="lastname">Lastname</label>
+            <input type="text" id="lastname" name="lastname" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Sex</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="sex" value="Male" required />
+                Male
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="sex" value="Female" required />
+                Female
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="status">Status</label>
+            <input
+              type="text"
+              id="status"
+              name="status"
+              placeholder="Its Complicated"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group-full">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" required />
+        </div>
+
+        <button type="submit" class="submit-btn">Create Profile</button>
+      </form>
+    </div>
+  </body>
+</html>
